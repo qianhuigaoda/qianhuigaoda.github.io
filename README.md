@@ -1,1 +1,1 @@
-!(https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/image/time.jpg)
+!(https://github.com/qianhuigaoda/qianhuigaoda.github.io/master/image/time.jpg)
