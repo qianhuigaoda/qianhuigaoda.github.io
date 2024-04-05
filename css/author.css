@@ -1,9 +1,8 @@
 .image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
  
 .image-container img {
-  margin: 0 10px; /* 可选，为图片之间添加间隔 */
+  display: inline;
+  margin: 0 10px; /* 左右间距 */
 }
