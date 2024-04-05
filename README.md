@@ -1,2 +1,1 @@
-![alt](https://github.com/qianhuigaoda.github.io/raw/master/image/time.jpg)
-![][code-past]
+!(https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/image/time.jpg)
