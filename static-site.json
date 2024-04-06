@@ -1,0 +1,17 @@
+{
+  "headers": [
+    {
+      "source": "https://qianhuigaoda.github.io/**",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "https://qianhuigaoda.github.io/"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, HEAD"
+        }
+      ]
+    }
+  ]
+}
