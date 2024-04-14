@@ -1,17 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>投稿方式</title>
-    <link type="text/css" rel="stylesheet" href="css/style.css"/>
-    <script type="text/javascript" src="js/script.js"></script>
+	<style>
+	body {
+	  background-color: #f2f2f2; /* 灰色的RRGGBB十六进制代码 */
+	}
+	</style>
+	<meta charset="UTF-8">
+	<title>投稿</title>
+<style>
+  /* 样式定义 */
+  body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+	.header {
+    position: fixed; /* 固定位置 */
+		top: 0; /* 固定在顶部 */
+		width: 100%; /* 宽度占满整个页面 */
+		left: 0; /* 固定在左侧 */
+		display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+		z-index: 999; /* 确保在其他内容之上 */
+  }
+
+  .logo-image {
+    width: 400px; /* 根据需要调整图片宽度 */
+    height: 65px; /* 保持图片比例 */
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .icon {
+    width: 30px; /* 图标宽度 */
+    height: 30px; /* 图标高度 */
+    margin-right: 5px; /* 图标与文字之间的间距 */
+  }
+
+  .link {
+    color: #007bff;
+    text-decoration: none;
+		margin-right: 25px;
+  }
+	
+</style>
+</head>
 <body>
-<h1>东辉科学报</h1>
-<h5>Donghui Science Daily</h5>
-<h4>投稿须知：</h4>
-<p id="msg"></p>
-<img src="https://pic.imgdb.cn/item/661005db68eb9357132da004.jpg">
-<p id="msg"></p>
+  <!-- HTML结构 -->
+  <header class="header">
+    <img class="logo-image" src="https://pic.imgdb.cn/item/661c4dfb68eb935713bd5216.png" alt="Logo"> <!-- 替换为你的图片路径 -->
+    <div class="header-right">
+      <img class="icon" src="https://pic.imgdb.cn/item/661c4ee268eb935713bdf247.png" alt="Icon"> <!-- 替换为你的图标路径 -->
+      <a class="link" href="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/index.html">主页</a> <!-- 替换为你的链接文字和URL -->
+			<img class="icon" src="https://pic.imgdb.cn/item/661c4ee768eb935713bdf652.png" alt="Icon"> <!-- 替换为你的图标路径 -->
+			<a class="link" href="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/paper.html">论文板块</a> <!-- 替换为你的链接文字和URL -->
+			<img class="icon" src="https://pic.imgdb.cn/item/661c4ede68eb935713bdeee4.png" alt="Icon"> <!-- 替换为你的图标路径 -->
+			<a class="link" href="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/author.html">作者板块</a> <!-- 替换为你的链接文字和URL -->
+    </div>
+  </header>
+<main>
+	<style>
+		/* 样式定义 */
+		.main-content {
+		    margin-top: 200px; /* 这里设置间距大小 */
+		    padding: 20px;
+		    max-width: 1200px;
+		    margin: 0 auto; /* 水平居中 */
+		  }
+		.image-container {
+			position: relative;
+	    height: 350px;
+			width: 800px;
+	    max-width: 1200px;
+	    margin: 0 auto;
+	  }
+	
+	  .image-container img {
+	    height: 400px;
+			width: 100%;
+	    display: block;
+			margin-top: 100px;
+	  }
+	
+	  .circle-container {
+	    display: flex;
+	    justify-content: center;
+	    margin-top: 65px;
+	  }
+	
+	  .circle {
+	    width: 30px;
+	    height: 30px;
+	    border-radius: 100%;
+	    background-color: #ddd;
+	    margin: 0 5px;
+	    cursor: pointer;
+	  }
+	
+	  .circle.active.active {
+	    background-color: #007bff;
+	  }
+	</style>
+	<main class="main-content">
+	<div class="image-container">
+	  <img id="image" src="https://pic.imgdb.cn/item/661c4dfe68eb935713bd54af.png" alt="Image 1">
+	</div>
+	
+	<div class="circle-container">
+	  <div class="circle" data-image="https://pic.imgdb.cn/item/661c4dfe68eb935713bd54af.png" onclick="changeImage(this)"></div>
+		<div class="circle" data-image="https://pic.imgdb.cn/item/661c4df468eb935713bd4d70.png" onclick="changeImage(this)"></div>
+	  <div class="circle" data-image="https://pic.imgdb.cn/item/661c4e6b68eb935713bda185.png" onclick="changeImage(this)"></div>
+	  <div class="circle" data-image="https://pic.imgdb.cn/item/661c4e1468eb935713bd6374.png" onclick="changeImage(this)"></div>
+		<div class="circle" data-image="https://pic.imgdb.cn/item/6610113468eb93571342835d.png" onclick="changeImage(this)"></div>
+	</div>
+	
+	<script>
+	  // JavaScript函数来切换图片
+	  function changeImage(circle) {
+	    // 移除之前所有圆圈的激活状态
+	    var circles = document.querySelectorAll('.circle');
+	    circles.forEach(function(circle) {
+	      circle.classList.remove('active');
+	    });
+	
+	    // 激活被点击的圆圈
+	    circle.classList.add('active');
+	
+	    // 获取图片元素
+	    var imageElement = document.getElementById('image');
+	
+	    // 切换图片源
+	    imageElement.src = circle.getAttribute('data-image');
+	  }
+	</script>
+</main>
+</div>
+<style>
+	.icon {
+	  width: 30px; /* 图标宽度 */
+	  height: 30px; /* 图标高度 */
+	  margin-right: 5px; /* 图标与文字之间的间距 */
+	}
+</style>
+<div class="header-right">
+      <img class="icon" src="https://pic.imgdb.cn/item/661c4edf68eb935713bdf038.png" alt="Icon"> <!-- 替换为你的图标路径 -->
+      <h2><p>投稿须知：</p></h2> <!-- 替换为你的链接文字和URL -->
+</div>
+<div>
+<h3><p>
 受non-science网的影响，我们意识到必须为民科活动采取相关的刊物，以发表民科们的研究。为此我们创办了《东辉科学报》，本刊为电子刊，不实际出版纸质印刷品，出版物可以在non-science网上获取且浏览，本刊遵循免费开放原则，不采取任何收费活动。另本刊近限民科范围的检索和浏览，我们采取东辉宇宙的同行评审制度，望各位踊跃投稿！
 
 以下是投稿须知，请您详细阅读并按要求准备您的投稿。
@@ -22,7 +165,7 @@
 <p></p>
 3. 投稿格式：为了方便编辑和读者阅读，我们需要您按照本刊的格式要求来准备投稿。您可以使用中文或英文撰写文章，字数不限。请使用清晰的标题、摘要、引言、材料与方法、结果与讨论、结论和参考文献等结构组织文章。投稿应以Word格式提交电子版文件。
 <p></p>
-4. 投稿途径：请将文章的电子版发送至本刊的投稿邮箱donghuisci@163.com或1216630685@qq.com，在邮件主题中注明“投稿-文章题目”，并在邮件正文中附上您的姓名、单位、联系方式等相关信息。
+4. 投稿途径：请将文章的电子版发送至本刊的投稿邮箱donghuisci@163.com。在邮件主题中注明“投稿-文章题目”，并在邮件正文中附上您的姓名、单位、联系方式等相关信息。
 <p></p>
 5. 审稿流程：《东辉科学报》采用东辉宇宙的同行评审制度。我们的编辑将对您的投稿进行初步审核，并将合适的稿件送交相关专家进行专业评审。根据评审结果，编辑将向您反馈投稿的结果。
 <p></p>
@@ -34,21 +177,42 @@
 <p></p>
 顺祝商祺，
 <p></p>
-《东辉科学报》编辑部
-<style>
-  .title {
-    display: inline-block;
-    margin-right: 20px;
-  }
-</style>
-<div align="center">
-<a href="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/index.html"><button>返回主页</button></a>
-<a href="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/paper1.html"><button>论文页面</button></a>
-<a href="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/author.html"><button>作者页面</button></a>
-<a href="https://github.com/qianhuigaoda/qianhuigaoda.github.io"><button>关于本站</button></a>
-<a href="https://tieba.baidu.com/p/8485060882?pid=147963735865&cid=0#14796373586"><button>贴吧链接</button></a>
-</div>
+《东辉科学报》编辑部</h3>
 <footer>
-	<!-- Footer Section -->        
-	<p align="center">&copy; Newspaper Website 2022</p>    
+<title>Image Row</title>
+<style>
+  .box-boder-container {
+    display: flex; /* Use Flexbox layout */
+  }
+  .box-boder {
+    flex: 0 0 25%; /* Each box takes up a quarter of the width */
+    border: auto; /* Border for visualization */
+    box-sizing: border-box; /* Ensure border is included in box size */
+    padding: 5px; /* Optional padding */
+    min-width: 800px; /* Minimum width of the box */
+    min-height: 200px; /* Minimum height of the box */
+		margin: 10px;
+  }
+	.box-boder img {
+	    width: 800px; /* 设置图片的宽度 */
+	    height: 400px; /* 设置图片的高度 */
+	    display: block; /* 使图片在边框内居中 */
+			margin: 15px auto;
+			margin-left: 25px;
+			margin-right: 25px;
+	}
+</style>
+<<div class="box-boder-container">
+	<div class="box-boder">
+  <img src="https://pic.imgdb.cn/item/661c4d9268eb935713bd0cc5.png" alt="Footer Image" class="boder-image">
+</div>
+
+  <div class="box-boder">
+	<img src="https://pic.imgdb.cn/item/661c4e2668eb935713bd6e04.png" alt="Footer Image" class="boder-image">
+</div>
+</div>
+<h3><p align="center">&copy; Donghui Science Daily 2023</p></h3>
+</footer>
+</html>
+
 </html>

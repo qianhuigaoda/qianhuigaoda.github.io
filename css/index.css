@@ -1,0 +1,24 @@
+/* 通过CSS将内容固定在页面顶端 */
+.top-content {
+    position: fixed; /* 使用fixed定位 */
+    top: 10; /* 距离顶部0像素 */
+    left: 40; /* 距离左侧0像素，也可以根据需要调整 */
+    width: 100%; /* 宽度设置为100%以铺满整个容器 */
+}
+ 
+.top-content img {position: absolute; /* 图片绝对定位 */
+    top: 10; /* 距离父元素上边距为0，即左上角 */
+    left: 10; /* 距离父元素左边距为0，即左上角 */
+    /* 这里可以定义图片的样式，比如大小、边距等 */
+}
+<div></div>
+.top-right-links {
+  position: relative; /* 相对定位，使得子元素可以相对于该元素定位 */
+  float: right; /* 浮动到右上角 */
+}
+ 
+.top-right-links a {
+  display: inline-block; /* 使链接横向排列 */
+  margin-left: 10px; /* 可选，添加链接之间的间距 */
+  text-decoration: none; /* 去除链接的下划线 */
+}

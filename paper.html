@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+	body {
+	  background-color: #f2f2f2; /* 灰色的RRGGBB十六进制代码 */
+	}
+	</style>
+	<meta charset="UTF-8">
+	<title>论文分栏</title>
+<style>
+  /* 样式定义 */
+  body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+	.header {
+    position: fixed; /* 固定位置 */
+		top: 0; /* 固定在顶部 */
+		width: 100%; /* 宽度占满整个页面 */
+		left: 0; /* 固定在左侧 */
+		display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+		z-index: 999; /* 确保在其他内容之上 */
+  }
+
+  .logo-image {
+    width: 400px; /* 根据需要调整图片宽度 */
+    height: 65px; /* 保持图片比例 */
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .icon {
+    width: 30px; /* 图标宽度 */
+    height: 30px; /* 图标高度 */
+    margin-right: 5px; /* 图标与文字之间的间距 */
+  }
+
+  .link {
+    color: #007bff;
+    text-decoration: none;
+		margin-right: 25px;
+  }
+	
+</style>
+</head>
+<body>
+  <!-- HTML结构 -->
+  <header class="header">
+    <img class="logo-image" src="https://pic.imgdb.cn/item/661c4dfb68eb935713bd5216.png" alt="Logo"> <!-- 替换为你的图片路径 -->
+    <div class="header-right">
+      <img class="icon" src="https://pic.imgdb.cn/item/661c4ee268eb935713bdf247.png" alt="Icon"> <!-- 替换为你的图标路径 -->
+      <a class="link" href="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/index.html">主页</a> <!-- 替换为你的链接文字和URL -->
+			<img class="icon" src="https://pic.imgdb.cn/item/661c4ede68eb935713bdeee4.png" alt="Icon"> <!-- 替换为你的图标路径 -->
+			<a class="link" href="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/author.html">作者板块</a> <!-- 替换为你的链接文字和URL -->
+			<img class="icon" src="https://pic.imgdb.cn/item/661c4edf68eb935713bdf038.png" alt="Icon"> <!-- 替换为你的图标路径 -->
+			<a class="link" href="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/tougao.html">投稿板块</a> <!-- 替换为你的链接文字和URL -->
+    </div>
+  </header>
+<main>
+	<style>
+		/* 样式定义 */
+		.main-content {
+		    margin-top: 200px; /* 这里设置间距大小 */
+		    padding: 20px;
+		    max-width: 1200px;
+		    margin: 0 auto; /* 水平居中 */
+		  }
+		.image-container {
+			position: relative;
+	    height: 350px;
+			width: 800px;
+	    max-width: 1200px;
+	    margin: 0 auto;
+	  }
+	
+	  .image-container img {
+	    height: 400px;
+			width: 100%;
+	    display: block;
+			margin-top: 100px;
+	  }
+	
+	  .circle-container {
+	    display: flex;
+	    justify-content: center;
+	    margin-top: 65px;
+	  }
+	
+	  .circle {
+	    width: 30px;
+	    height: 30px;
+	    border-radius: 100%;
+	    background-color: #ddd;
+	    margin: 0 5px;
+	    cursor: pointer;
+	  }
+	
+	  .circle.active.active {
+	    background-color: #007bff;
+	  }
+	</style>
+	<main class="main-content">
+	<div class="image-container">
+	  <img id="image" src="https://pic.imgdb.cn/item/661c4dfe68eb935713bd54af.png" alt="Image 1">
+	</div>
+	
+	<div class="circle-container">
+	  <div class="circle" data-image="https://pic.imgdb.cn/item/661c4dfe68eb935713bd54af.png" onclick="changeImage(this)"></div>
+	  	<div class="circle" data-image="https://pic.imgdb.cn/item/661c4df468eb935713bd4d70.png" onclick="changeImage(this)"></div>
+	    <div class="circle" data-image="https://pic.imgdb.cn/item/661c4e6b68eb935713bda185.png" onclick="changeImage(this)"></div>
+	    <div class="circle" data-image="https://pic.imgdb.cn/item/661c4e1468eb935713bd6374.png" onclick="changeImage(this)"></div>
+	  	<div class="circle" data-image="https://pic.imgdb.cn/item/6610113468eb93571342835d.png" onclick="changeImage(this)"></div>
+	  </div>
+	
+	<script>
+	  // JavaScript函数来切换图片
+	  function changeImage(circle) {
+	    // 移除之前所有圆圈的激活状态
+	    var circles = document.querySelectorAll('.circle');
+	    circles.forEach(function(circle) {
+	      circle.classList.remove('active');
+	    });
+	
+	    // 激活被点击的圆圈
+	    circle.classList.add('active');
+	
+	    // 获取图片元素
+	    var imageElement = document.getElementById('image');
+	
+	    // 切换图片源
+	    imageElement.src = circle.getAttribute('data-image');
+	  }
+	</script>
+</main>
+<div></div>
+<title>下拉框直接跳转</title>
+<script>
+function redirectToPage(select) {
+    var value = select.options[select.selectedIndex].value;
+    if (value !== "") {
+        window.location.href = value;
+    }
+}
+</script>
+<div align="center">
+<select onchange="redirectToPage(this);">
+    <option value="">快捷选择论文</option>
+    <option value="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/paper/1.html">不同水位下水压和密度的差异与重力分布趋势的关联</option>
+    <option value="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/paper/2.html">黑魔法咏唱字节序列的分析与不同组合效果的差异</option>
+    <option value="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/paper/3.html">东辉宇宙-新种记述</option>
+<option value="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/paper/4.html">基于山寨S21农业与东辉科学院的新式农业科学与其基础上胡扯的新式社会生产关系和环境工程</option>
+<option value="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/paper/5.html">化学辩证法的实践与柠檬苏打水的应用</option>
+<option value="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/paper/6.html">论东辉宇宙中高达对世界战争的影响与核心价值观思考</option>
+<option value="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/paper/7.html">开挂定律的错误，以充钱火线（CF）为例</option>
+<option value="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/paper/8.html">论蒙德儿杂交豌豆实验的主观性与危害</option>
+<option value="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/paper/9.html">对于电子法宝的可行性讨论</option>
+<option value="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/paper/10.html">讨论如何被宇宙超人选为人间体</option>
+<option value="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/paper/11.html">元素反应与新能源的应用</option>
+</select>
+</div>
+<style>
+	.icon {
+	  width: 30px; /* 图标宽度 */
+	  height: 30px; /* 图标高度 */
+	  margin-right: 5px; /* 图标与文字之间的间距 */
+	}
+</style>
+<div class="header-right">
+      <img class="icon" src="https://pic.imgdb.cn/item/661c4ee768eb935713bdf652.png" alt="Icon"> <!-- 替换为你的图标路径 -->
+      <h2><p>东辉科学报论文导览</p></h2> <!-- 替换为你的链接文字和URL -->
+</div>
+<title>论文</title>
+<style>
+	.container {
+    display: flex; /* Use Flexbox layout */
+  }
+  .boder {
+    flex: 0 0 25%; /* Each box takes up a quarter of the width */
+    border: 1px solid #000; /* Border for visualization */
+    box-sizing: border-box; /* Ensure border is included in box size */
+    padding: 10px; /* Optional padding */
+    min-width: 400px; /* Minimum width of the box */
+    min-height: 600px; /* Minimum height of the box */
+    text-align: center; /* Center the text inside the box */
+		margin: 0 auto ;
+  }
+	.boder img {
+	    width: 350px; /* 设置图片的宽度 */
+	    height: 320px; /* 设置图片的高度 */
+	    display: block; /* 使图片在边框内居中 */
+	    margin: 0 auto;
+	  }
+	.boder a {
+					text-decoration: none;
+					color: blue;
+			    padding: 5px 10px;
+					text-align: left; /* 设置文字居中 */
+					display: inline-block;
+			  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="boder">
+		<h2 align="center"><P>不同水位下水压和密度的差异与重力分布趋势的关联</P>
+		    <p>作者：王东辉几何</p></h2>
+      <img src="https://pic.imgdb.cn/item/6610113d68eb935713429b39.png" alt="Image 1">
+    </a>
+    <h3><a href="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/paper/1.html">此项研究通过调查不同水位和高度下水压和密度的差异规律。归纳出一个适用于地球重力空间的物理定律。即：“在地球重力空间的一个容器内，水体的质点越接近重力加速度大的区域，其密度和压强越大，反之越小”。然后...</a></h3>
+  </div>
+  <div class="boder"><h2 align="center"><P>黑魔法咏唱字节序列的分析与不同组合效果的差异</P>
+		    <p>作者：王东辉魔法</p></h2>
+      <img src="https://pic.imgdb.cn/item/6610113968eb935713429001.png" alt="Image 2">
+    </a>
+    <h3><a href="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/paper/2.html">黑魔法作为强大的力量，在魔法学院的教学中拥有重要的地位。黑魔法的咏唱过程中使用的特定字节序列，对于施法者而言具有重要意义。本文通过深入分析黑魔法咏唱字节序列的特征，并通过实验研究不同组合方式对黑魔法效果的影响来作为判断依据。旨在探讨黑魔法咏唱字节序列的分析与不同组合方式之间的差异。通过这些研究结果，我们...</a></h3>
+  </div>
+  <div class="boder"><h2 align="center"><P>东辉宇宙一新种记述</P>
+		    <p>作者：王东辉几何</p></h2>
+      <img src="https://pic.imgdb.cn/item/6610113068eb9357134278e0.png" alt="Image 3">
+    </a>
+    <h3><a href="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/paper/3.html">本文研究了东辉宇宙中新的学科：王东辉几何 Geometria	wangdonghuae。通过对该物种的行为、形态以及分布特征的观察和实验，揭示了其隶属于民科和几何属的分类学归属。研究发现，王东辉几何具有形态变化多端的特点，在民科的各个领域中能够形成不同的摸样和模式，尽管如此总能通过其特有的...</a></h3>
+  </div>
+  <div class="boder"><h2 align="center"><P>基于柬埔寨 S21 农业与社会科学院的新式农业科学 与其基础上建立的新式社会生产关系和环境工程</P>
+        <p>作者：波东辉</p></h2>
+      <img src="https://pic.imgdb.cn/item/6610115068eb93571342c61f.png" alt="Image 4">
+    </a>
+    <h3><a href="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/paper/4.html">本篇论文探讨了柬埔寨 S21 农业与社会科学院在新式农业科学和社会生产关系以及环境工程方面的 研究成果。通过对农业科技的应用和创新，该院实现了农业生产的可持续发展，并在社会生产关系 和环境工程领域做出了重要贡献。本文旨在全面分析该院在这些领域的研究成果，并展望未来的发 展方向。</a></h3>
+  </div>
+</div>
+
+<div class="container">
+  <div class="boder">
+		<h2 align="center"><P>化学辩证法的实践与柠檬苏打水的应用</P>
+		    <p>作者：王东辉化学</p></h2>
+      <img src="https://pic.imgdb.cn/item/6610467168eb9357139ff0ac.png" alt="Image 1">
+    </a>
+    <h3><a href="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/paper/5.html">此项研究通过调查不同水位和高度下水压和密度的差异规律。归纳出一个适用于地球重力空间的物理定律。即：“在地球重力空间的一个容器内，水体的质点越接近重力加速度大的区域，其密度和压强越大，反之越小”。然后...</a></h3>
+  </div>
+  <div class="boder"><h2 align="center"><P>论东辉宇宙中高达对世界战争的影响与核心价值观思考</P>
+		    <p>作者：王东辉高达</p></h2>
+      <img src="https://pic.imgdb.cn/item/661c4db768eb935713bd22b6.png" alt="Image 2">
+    </a>
+    <h3><a href="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/paper/6.html">本文研究东辉宇宙中一种前所未有的强大武器一一王东辉高达(GUNDAMwangdonghui)。对该武器与普通武器的火力、机动性、隐蔽性、环境适应性以及损耗的对比，同时观察二者对不同目标之间的伤害与破坏，展示了这一新型武器对世界战争格局的影响。经过研究发现，王东辉高达具有强大火力与破坏能力，机动性比普通武器更好，隐蔽性上稍差，但装备不同附件能适应多种环境变化，  能够进入极寒、极热、辐射、太空、深海等，使战争进入更高维度的邻域。因此必须慎重思考如何使用该武器，  战争对国家还是个人影响深远，本研究进一步深化东辉宇宙中该武器的使用和核心思想提供了重要的标准与规范。</a></h3>
+  </div>
+  <div class="boder"><h2 align="center"><P>胡克定律的错误，以穿越火线（CF）为例</P>
+		    <p>作者：王东辉CS</p></h2>
+      <img src="https://pic.imgdb.cn/item/6610114268eb93571342a6f3.png" alt="Image 3">
+    </a>
+    <h3><a href="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/paper/7.html">本文探究了胡克定律的有效性，胡克定律指出弹簧的弹力与其变形成正比。通过计算机模拟和真实案例的实验，本研究旨在揭示关于胡克定律的误解，并展示其不一致性。实验通过比较两个具有相似弹性和变形但在遵循胡克定律方面存在差异的物体展示了弹力的差异。研究结果表明，在具有相同弹性和变形情况下，并不总是符合胡克定律，从而质疑其科学可信性。</a></h3>
+  </div>
+  <div class="boder"><h2 align="center"><P>论孟德尔杂交豌豆实验的主观性与危害</P>
+        <p>作者：王东昏</p></h2>
+      <img src="https://pic.imgdb.cn/item/6610114668eb93571342affe.png" alt="Image 4">
+    </a>
+    <h3><a href="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/paper/8.html">本文针对官科生物学中的遗传定律提出批评和反驳。指出了现今科学环境中流行的人云亦云的现象, 并对豌豆杂交实验导出的遗传定律的严谨性提出质疑。接下来，通过实际生活中的现象进行反向证 伪，推翻了遗传定律。使用绿豆和豌豆的物理性质差异来说明不同物种之间的遗传规律并不具有普 遍性。通过举例论证和社会学研究，指出遗传定律对于生物繁殖与性别定义的局限性以及一些现实 生活中出现的违反遗传定律的现象。</a></h3>
+  </div>
+</div>
+
+<div class="container">
+  <div class="boder">
+		<h2 align="center"><P>对于电子法宝的可行性讨论</P>
+		    <p>作者：王东辉修仙</p></h2>
+      <img src="https://pic.imgdb.cn/item/6610114b68eb93571342bc1d.png" alt="Image 1">
+    </a>
+    <h3><a href="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/paper/9.html">法宝是对一名修仙者而言十分重要的事物，往往承载着修仙者自身所修的道，在修仙过程中有着举足轻重的地位。然而传统法宝往往有着消耗灵力过多、灵力转化率较低等缺陷，使得修仙者在使用  法器时浪费宝贵的灵力。本文主要通过解释法宝运行灵力的原理来阐释如何将法宝的主要部件替换为灵力转化率更高的电子部件，研究将法宝电子化的理论依据，最终解释电子法宝的可行性。</a></h3>
+  </div>
+  <div class="boder"><h2 align="center"><P>如何被宇宙超人选为人间体</P>
+		    <p>作者：王东辉特摄</p></h2>
+      <img src="https://pic.imgdb.cn/item/66104d6c68eb935713a87262.png" alt="Image 2">
+    </a>
+    <h3><a href="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/paper/10.html">宇宙超人作为东辉宇宙中拥有最为强大力量的外星四体人，在维护宇宙和平中拥有重要地位。  宇宙超人在维护和平的战斗中，时常需要到访地球来观察记录一些邪恶的外星生命体的活动。  在此过程中需要进入地球，然而地球的生态和环境与超人的家乡  M78  星云不同，因此需要  选择一个地球人与之一心同体，不仅能节约能量，而且在地球上活动能最大程度隐藏自身来  避免一些未知的风险</a></h3>
+  </div>
+  <div class="boder"><h2 align="center"><P>元素反应与新能源的应用</P>
+		    <p>作者：王西辉原神</p></h2>
+      <img src="https://pic.imgdb.cn/item/661c4e9c68eb935713bdc205.png" alt="Image 3">
+    </a>
+    <h3><a href="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/paper/11.html">随着全球能源需求的不断增长，元素反应的开发与应用成为当前研究的热点。元素反应作为新能源技术的基础，其研究对于推动新能源领域的发展具有重要意义。本文首先分析了元素反应的基本原理及其在新能源领域的应用现状，随后重点探讨了新能源中元素反应的两大类，分别是“增幅反应”和“剧变反应”的应用及其优势，最后对新能源的发展趋势进行了展望。</a></h3>
+  </div>
+  <div class="boder"><h2 align="center"><P></P>
+        <p></p></h2>
+      <img src="" alt="暂无">
+    </a>
+    <h3><a href=""></a></h3>
+  </div>
+</div>
+<footer>
+<title>Image Row</title>
+<style>
+  .box-boder-container {
+    display: flex; /* Use Flexbox layout */
+  }
+  .box-boder {
+    flex: 0 0 25%; /* Each box takes up a quarter of the width */
+    border: auto; /* Border for visualization */
+    box-sizing: border-box; /* Ensure border is included in box size */
+    padding: 5px; /* Optional padding */
+    min-width: 800px; /* Minimum width of the box */
+    min-height: 200px; /* Minimum height of the box */
+		margin: 10px;
+  }
+	.box-boder img {
+	    width: 800px; /* 设置图片的宽度 */
+	    height: 400px; /* 设置图片的高度 */
+	    display: block; /* 使图片在边框内居中 */
+			margin: 15px auto;
+			margin-left: 25px;
+			margin-right: 25px;
+	}
+</style>
+<<div class="box-boder-container">
+	<div class="box-boder">
+  <img src="https://pic.imgdb.cn/item/661c4d9268eb935713bd0cc5.png" alt="Footer Image" class="boder-image">
+</div>
+
+  <div class="box-boder">
+	<img src="https://pic.imgdb.cn/item/661c4e2668eb935713bd6e04.png" alt="Footer Image" class="boder-image">
+</div>
+</div>
+<h3><p align="center">&copy; Donghui Science Daily 2023</p></h3>
+</footer>
+</html>
+
+</html>

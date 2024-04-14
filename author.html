@@ -1,65 +1,310 @@
-<html lang="en" style="background-image: url('https://pic.imgdb.cn/item/6610488a68eb935713a26530.png'); background-size: cover;">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>作者界面</title>
-<div align="center">
-<h1>东辉科学报</h1>
-<h2>Donghui Science Daily</h2>
-<img src="https://pic.imgdb.cn/item/661005d768eb9357132d9e00.jpg" width="900" height="500">
-</div>
-</hearc>
-<h4>东辉科学报论文作者：（排名不分先后）</h4>
-</heard>
-<div>
-<table align="center"><tr>
-    <td><img width="400px" height="600px"<img src="https://pic.imgdb.cn/item/661005d368eb9357132d9c7d.png"/> 王东辉</td>
-    <td><img width="400px" height="600px"<img src="https://pic.imgdb.cn/item/661005c768eb9357132d99a5.jpg.jpg"/> 王东辉魔法</td>
-    <td><img width="400px" height="600px"<img src="https://pic.imgdb.cn/item/661005df68eb9357132da269.jpg"/> 王东辉日本</td>
-</tr></table>
-</div>
-<div>
-<table align="center"><tr>
-  <td><img width="400px" height="600px"<img src="https://pic.imgdb.cn/item/661005d968eb9357132d9f29.jpg"/> 王东辉足球</td>
-    <td><img width="400px" height="600px"<img src="https://pic.imgdb.cn/item/661005c368eb9357132d97e3.png"/> 王东辉模型</td>
-    <td><img width="400px" height="600px"<img src="https://pic.imgdb.cn/item/661005e268eb9357132da552.png"/> 王东辉特摄</td>
-</tr></table>
-</div>
-<div>
-<table align="center"><tr>
-  <td><img width="400px" height="600px"<img src="https://pic.imgdb.cn/item/6610115b68eb93571342dd11.png"/> 王前辉修仙</td>
-  <td><img width="400px" height="600px"<img src="https://pic.imgdb.cn/item/66100c8a68eb93571338e309.png"/> 王东辉历史</td>
-    <td><img width="400px" height="600px"<img src="https://pic.imgdb.cn/item/6610116168eb93571342ea6e.png"/> 王东辉艺术</td>
-</tr></table>
-</div>
-<div>
- <table align="center"><tr>
-  <td><img width="400" height="600px"<img src="https://pic.imgdb.cn/item/6610116a68eb93571342f9ce.png"/> 王东辉化学</td>
-  <td><img width="400px" height="600px"<img src="https://pic.imgdb.cn/item/66100c8b68eb93571338e561.png"/> 王东辉CS</td>
-     <td><img width="400px" height="600px"<img src="https://pic.imgdb.cn/item/661005e068eb9357132da382.jpg"/> 波东辉</td>
-</tr></table>
-</div>
-    <div>
- <table align="center"><tr>
-  <td><img width="400" height="600px"<img src="https://pic.imgdb.cn/item/66144d8368eb935713fb7c6b.png"/> 王西辉原神</td>
-  <td><img width="400px" height="600px"<img src="https://pic.imgdb.cn/item/6614502068eb935713ff145b.png"/> 王东辉烹饪</td>
-     <td><img width="400px" height="600px"<img src="https://pic.imgdb.cn/item/661450bd68eb935713ffd5a8.png"/> 王东辉佛学</td>
-</tr></table>
+	<style>
+	body {
+	  background-color: #f2f2f2; /* 灰色的RRGGBB十六进制代码 */
+	}
+	</style>
+	<meta charset="UTF-8">
+	<title>作者分栏</title>
+<style>
+  /* 样式定义 */
+  body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+	.header {
+    position: fixed; /* 固定位置 */
+		top: 0; /* 固定在顶部 */
+		width: 100%; /* 宽度占满整个页面 */
+		left: 0; /* 固定在左侧 */
+		display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+		z-index: 999; /* 确保在其他内容之上 */
+  }
+
+  .logo-image {
+    width: 400px; /* 根据需要调整图片宽度 */
+    height: 65px; /* 保持图片比例 */
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .icon {
+    width: 30px; /* 图标宽度 */
+    height: 30px; /* 图标高度 */
+    margin-right: 5px; /* 图标与文字之间的间距 */
+  }
+
+  .link {
+    color: #007bff;
+    text-decoration: none;
+		margin-right: 25px;
+  }
+	
+</style>
+</head>
+<body>
+  <!-- HTML结构 -->
+  <header class="header">
+    <img class="logo-image" src="https://pic.imgdb.cn/item/661c4dfb68eb935713bd5216.png" alt="Logo"> <!-- 替换为你的图片路径 -->
+    <div class="header-right">
+      <img class="icon" src="https://pic.imgdb.cn/item/661c4ee268eb935713bdf247.png" alt="Icon"> <!-- 替换为你的图标路径 -->
+      <a class="link" href="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/index.html">主页</a> <!-- 替换为你的链接文字和URL -->
+			<img class="icon" src="https://pic.imgdb.cn/item/661c4ee768eb935713bdf652.png" alt="Icon"> <!-- 替换为你的图标路径 -->
+			<a class="link" href="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/paper.html">论文板块</a> <!-- 替换为你的链接文字和URL -->
+			<img class="icon" src="https://pic.imgdb.cn/item/661c4edf68eb935713bdf038.png" alt="Icon"> <!-- 替换为你的图标路径 -->
+			<a class="link" href="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/tougao.html">投稿板块</a> <!-- 替换为你的链接文字和URL -->
+    </div>
+  </header>
+<main>
+	<style>
+		/* 样式定义 */
+		.main-content {
+		    margin-top: 200px; /* 这里设置间距大小 */
+		    padding: 20px;
+		    max-width: 1200px;
+		    margin: 0 auto; /* 水平居中 */
+		  }
+		.image-container {
+			position: relative;
+	    height: 350px;
+			width: 800px;
+	    max-width: 1200px;
+	    margin: 0 auto;
+	  }
+	
+	  .image-container img {
+	    height: 400px;
+			width: 100%;
+	    display: block;
+			margin-top: 100px;
+	  }
+	
+	  .circle-container {
+	    display: flex;
+	    justify-content: center;
+	    margin-top: 65px;
+	  }
+	
+	  .circle {
+	    width: 30px;
+	    height: 30px;
+	    border-radius: 100%;
+	    background-color: #ddd;
+	    margin: 0 5px;
+	    cursor: pointer;
+	  }
+	
+	  .circle.active.active {
+	    background-color: #007bff;
+	  }
+	</style>
+	<main class="main-content">
+	<div class="image-container">
+	  <img id="image" src="https://pic.imgdb.cn/item/661c4dfe68eb935713bd54af.png" alt="Image 1">
+	</div>
+	
+	<div class="circle-container">
+	  <div class="circle" data-image="https://pic.imgdb.cn/item/661c4dfe68eb935713bd54af.png" onclick="changeImage(this)"></div>
+		<div class="circle" data-image="https://pic.imgdb.cn/item/661c4df468eb935713bd4d70.png" onclick="changeImage(this)"></div>
+	  <div class="circle" data-image="https://pic.imgdb.cn/item/661c4e6b68eb935713bda185.png" onclick="changeImage(this)"></div>
+	  <div class="circle" data-image="https://pic.imgdb.cn/item/661c4e1468eb935713bd6374.png" onclick="changeImage(this)"></div>
+		<div class="circle" data-image="https://pic.imgdb.cn/item/6610113468eb93571342835d.png" onclick="changeImage(this)"></div>
+	</div>
+	
+	<script>
+	  // JavaScript函数来切换图片
+	  function changeImage(circle) {
+	    // 移除之前所有圆圈的激活状态
+	    var circles = document.querySelectorAll('.circle');
+	    circles.forEach(function(circle) {
+	      circle.classList.remove('active');
+	    });
+	
+	    // 激活被点击的圆圈
+	    circle.classList.add('active');
+	
+	    // 获取图片元素
+	    var imageElement = document.getElementById('image');
+	
+	    // 切换图片源
+	    imageElement.src = circle.getAttribute('data-image');
+	  }
+	</script>
+</main>
 </div>
 <style>
-  .title {
-    display: inline-block;
-    margin-right: 20px;
-  }
+	.icon {
+	  width: 30px; /* 图标宽度 */
+	  height: 30px; /* 图标高度 */
+	  margin-right: 5px; /* 图标与文字之间的间距 */
+	}
 </style>
-<div align="center">
-<a href="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/index.html"><button>返回主页</button></a>
-<a href="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/paper1.html"><button>论文页面</button></a>
-<a href="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/tougao.html"><button>投稿方式</button></a>
-<a href="https://github.com/qianhuigaoda/qianhuigaoda.github.io"><button>关于本站</button></a>
-<a href="https://tieba.baidu.com/p/8485060882?pid=147963735865&cid=0#14796373586"><button>贴吧链接</button></a>
+<div class="header-right">
+      <img class="icon" src="https://pic.imgdb.cn/item/661c4ede68eb935713bdeee4.png" alt="Icon"> <!-- 替换为你的图标路径 -->
+      <h2><p>东辉科学报论文作者：（排名不分先后）</p></h2> <!-- 替换为你的链接文字和URL -->
 </div>
-<footer>        
-<!-- Footer Section -->        
-<p align="center">&copy; Newspaper Website 2022</p>    
-</footer></body></html>
+
+<title>作者</title>
+<style>
+	.box-container {
+    display: flex; /* Use Flexbox layout */
+  }
+  .box {
+    flex: 0 0 25%; /* Each box takes up a quarter of the width */
+    border: 1px solid #000; /* Border for visualization */
+    box-sizing: border-box; /* Ensure border is included in box size */
+    padding: 10px; /* Optional padding */
+    min-width: 400px; /* Minimum width of the box */
+    min-height: 600px; /* Minimum height of the box */
+    text-align: center; /* Center the text inside the box */
+		margin: 0 auto ;
+  }
+	.box img {
+	    width: 350px; /* 设置图片的宽度 */
+	    height: 500px; /* 设置图片的高度 */
+	    display: block; /* 使图片在边框内居中 */
+	    margin: 0 auto;
+	  }
+	.box text {
+					text-decoration: none;
+			    padding: 5px 10px;
+					text-align: left; /* 设置文字居中 */
+					display: inline-block;
+			  }
+</style>
+<div class="box-container">
+  <div class="box">
+    <h3><p align="center">王东辉魔法</p></h3>
+		<img src="https://pic.imgdb.cn/item/661005c768eb9357132d99a5.jpg" alt="图片">
+    <h3><p align="left">Exploring the mysteries of magic is also exploring the essence of this universe</p></h3>
+		<h3><p align="left">探索魔法的奥秘，也是在探索这个宇宙的本质</p></h3>
+  </div>
+
+	  <div class="box">
+	    <h3><p align="center">王东辉高达</p></h3>
+	  	<img src="https://pic.imgdb.cn/item/661005c668eb9357132d9931.png.jpg" alt="图片">
+	    <h3><p align="left">Truth is only within the range of my cannon</p></h3>
+	  	<h3><p align="left">真理只在我的大炮射程之内</p></h3>
+	  </div>
+			
+			  <div class="box">
+			    <h3><p align="center">王东辉佛学</p></h3>
+					<img src="https://pic.imgdb.cn/item/661450bd68eb935713ffd5a8.png" alt="图片">
+			    <h3><p align="left">Learn the Dawei Tianlong and Dafa spells from me and you'll be able to see and break the pirate Wang Donghui's gold coin space transfer magic</p></h3>
+					<h3><p align="left">跟我学大威天龙和大罗法咒就能参悟和破解王东辉海盗的金币空间转移魔法</p></h3>
+			  </div>
+				
+				  <div class="box">
+				    <h3><p align="center">王东辉足球</p></h3>
+						<img src="https://pic.imgdb.cn/item/661005d968eb9357132d9f29.jpg" alt="图片">
+				    <h3><p align="left">No matter how much effort, no matter how much sea cucumber is eaten, or how devout a prayer is, it cannot be saved. I feel powerless</p></h3>
+						<h3><p align="left">即使做再多的努力、吃再多的海参、或者再虔诚的祈祷都不能挽救它，我觉得无能为力</p></h3>
+				  </div>
+					
+</div>
+<div class="box-container">
+  <div class="box">
+    <h3><p align="center">王东辉化学</p></h3>
+		<img src="https://pic.imgdb.cn/item/6610116a68eb93571342f9ce.png" alt="图片">
+    <h3><p align="left"></p>Mastering chemistry can turn stones into gold without the need for cultivation or magic.</h3>
+		<h3><p align="left">掌握化学，不用修仙和魔法就能点石成金。</p></h3>
+  </div>
+
+	  <div class="box">
+	    <h3><p align="center">王东辉日本</p></h3>
+	  	<img src="https://pic.imgdb.cn/item/661005df68eb9357132da269.jpg" alt="图片">
+	    <h3><p align="left">日本人は核廃水をもっと飲むべきだ</p></h3>
+	  	<h3><p align="left">日本人应该多喝核废水</p></h3>
+	  </div>
+			
+			  <div class="box">
+			    <h3><p align="center">王东辉特摄</p></h3>
+					<img src="https://pic.imgdb.cn/item/661c5ba468eb935713cad99a.png" alt="图片">
+			    <h3><p align="left">We cannot change the past, but perhaps we can turn the future around.</p></h3>
+					<h3><p align="left">过去我们无法改变，但是或许可以扭转未来。</p></h3>
+			  </div>
+				
+				  <div class="box">
+				    <h3><p align="center">王东辉修仙</p></h3>
+						<img src="https://pic.imgdb.cn/item/661c4e7368eb935713bda6f4.png" alt="图片">
+				    <h3><p align="left">The wind and clouds are surging, and the divine light is overflowing. This is the sign that I have reached the realm of cultivating immortality</p></h3>
+						<h3><p align="left">风起云涌,神光四溢,此乃我达到修仙境界的标志</p></h3>
+				  </div>
+</div>
+	<div class="box-container">
+	  <div class="box">
+	    <h3><p align="center">王东辉艺术</p></h3>
+			<img src="https://pic.imgdb.cn/item/661c4ea668eb935713bdc825.png" alt="图片">
+	    <h3><p align="left">Learn art, become art.</p></h3>
+			<h3><p align="left">学会艺术，成为艺术。</p></h3>
+	  </div>
+	
+		  <div class="box">
+		    <h3><p align="center">王东辉CS</p></h3>
+		  	<img src="https://pic.imgdb.cn/item/66100c8b68eb93571338e561.png" alt="图片">
+		    <h3><p align="left">There is no living object in my scope</p></h3>
+		  	<h3><p align="left">我的瞄准镜里，没有活物。</p></h3>
+		  </div>
+				
+				  <div class="box">
+				    <h3><p align="center">波东辉</p></h3>
+						<img src="https://pic.imgdb.cn/item/661005e068eb9357132da382.jpg" alt="图片">
+				    <h3><p align="left">When the population is zero, there will be no gap.</p></h3>
+						<h3><p align="left">当人口为零，就不会有差距。</p></h3>
+				  </div>
+					
+					  <div class="box">
+					    <h3><p align="center">王西辉原神</p></h3>
+							<img src="https://pic.imgdb.cn/item/66144d8368eb935713fb7c6b.png" alt="图片">
+					    <h3><p align="left">Wake up the sleeping power and light up the beacon of hope. The world of Genshin Impact needs your courage and wisdom.</p></h3>
+							<h3><p align="left">唤醒沉睡的力量，点亮希望的灯塔，原神的世界需要你的勇气与智慧。</p></h3>
+					  </div>
+		</div>
+<footer>
+<title>Image Row</title>
+<style>
+  .box-boder-container {
+    display: flex; /* Use Flexbox layout */
+  }
+  .box-boder {
+    flex: 0 0 25%; /* Each box takes up a quarter of the width */
+    border: auto; /* Border for visualization */
+    box-sizing: border-box; /* Ensure border is included in box size */
+    padding: 5px; /* Optional padding */
+    min-width: 800px; /* Minimum width of the box */
+    min-height: 200px; /* Minimum height of the box */
+		margin: 10px;
+  }
+	.box-boder img {
+	    width: 800px; /* 设置图片的宽度 */
+	    height: 400px; /* 设置图片的高度 */
+	    display: block; /* 使图片在边框内居中 */
+			margin: 15px auto;
+			margin-left: 25px;
+			margin-right: 25px;
+	}
+</style>
+<<div class="box-boder-container">
+	<div class="box-boder">
+  <img src="https://pic.imgdb.cn/item/661c4d9268eb935713bd0cc5.png" alt="Footer Image" class="boder-image">
+</div>
+
+  <div class="box-boder">
+	<img src="https://pic.imgdb.cn/item/661c4e2668eb935713bd6e04.png" alt="Footer Image" class="boder-image">
+</div>
+</div>
+<h3><p align="center">&copy; Donghui Science Daily 2023</p></h3>
+</footer>
+</html>
+
 </html>
