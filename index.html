@@ -32,7 +32,19 @@
     width: 400px; /* 根据需要调整图片宽度 */
     height: 65px; /* 保持图片比例 */
   }
-
+  .audio-container {
+              display: flex;
+              justify-content: center; /* 水平居中 */
+              align-items: center; /* 垂直居中 */
+              height: 50px; /* 设置容器的高度 */
+              background-color: #f5f5f5; /* 设置背景颜色 */
+              padding: 10px; /* 设置内边距 */
+          }
+  
+          /* 设置audio播放器的样式 */
+          audio {
+              width: 300px; /* 设置播放器的宽度 */
+          }
   .header-right {
     display: flex;
     align-items: center;
@@ -52,11 +64,16 @@
 	
 </style>
 </head>
-<body>
   <!-- HTML结构 -->
   <header class="header">
     <img class="logo-image" src="https://pic.imgdb.cn/item/661c4dfb68eb935713bd5216.png" alt="Logo"> <!-- 替换为你的图片路径 -->
-    <div class="header-right">
+    <div class="audio-container">
+				 <audio id="audioPlayer" controls>
+					 <source src="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/mp3/01.mp3" type="audio/mpeg">
+					 </audio>
+					 <button id="nextSongButton"><img class="icon" src="https://pic.imgdb.cn/item/6621c28a0ea9cb1403738d89.png" alt="Icon" width="0.1px" height="0.1px"></button>
+					 </div>
+		<div class="header-right">
       <img class="icon" src="https://pic.imgdb.cn/item/661c4ee768eb935713bdf652.png" alt="Icon"> <!-- 替换为你的图标路径 -->
       <a class="link" href="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/paper.html">论文板块</a> <!-- 替换为你的链接文字和URL -->
 			<img class="icon" src="https://pic.imgdb.cn/item/661c4ede68eb935713bdeee4.png" alt="Icon"> <!-- 替换为你的图标路径 -->
@@ -64,7 +81,46 @@
 			<img class="icon" src="https://pic.imgdb.cn/item/661c4edf68eb935713bdf038.png" alt="Icon"> <!-- 替换为你的图标路径 -->
 			<a class="link" href="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/touga.html">投稿板块</a> <!-- 替换为你的链接文字和URL -->
     </div>
-  </header>
+	
+ 
+</audio>
+<script>
+   // 获取音频播放器和按钮元素
+           const audioPlayer = document.getElementById('audioPlayer');
+           const nextSongButton = document.getElementById('nextSongButton');
+   
+           // 定义曲目列表
+           const songs = [
+               'https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/mp3/01.mp3',
+               'https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/mp3/02.mp3'
+							 'https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/mp3/03.mp3'
+							 'https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/mp3/04.mp3'
+							 'https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/mp3/05.mp3'
+							 'https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/mp3/06.mp3'
+           ];
+   
+           // 当前播放的曲目索引
+           let currentSongIndex = 0;
+   
+           // 当点击下一首按钮时
+           nextSongButton.addEventListener('click', function() {
+               // 检查是否已经是最后一首曲目
+               if (currentSongIndex < songs.length - 1) {
+                   // 增加当前曲目索引
+                   currentSongIndex++;
+                   // 更新音频播放器的源
+                   audioPlayer.src = songs[currentSongIndex];
+                   // 播放下一首曲目
+                   audioPlayer.play();
+               } else {
+                   // 如果是最后一首曲目，可以选择重置到第一首
+                   currentSongIndex = 0;
+                   audioPlayer.src = songs[currentSongIndex];
+                   audioPlayer.play();
+               }
+           });
+</script>
+ </header>
 <main>
 	<style>
 		/* 样式定义 */
