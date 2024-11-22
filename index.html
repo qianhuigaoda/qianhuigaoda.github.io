@@ -81,45 +81,6 @@
 			<img class="icon" src="https://pic.imgdb.cn/item/661c4edf68eb935713bdf038.png" alt="Icon"> <!-- 替换为你的图标路径 -->
 			<a class="link" href="https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/touga.html">投稿板块</a> <!-- 替换为你的链接文字和URL -->
     </div>
-	
- 
-</audio>
-<script>
-   // 获取音频播放器和按钮元素
-           const audioPlayer = document.getElementById('audioPlayer');
-           const nextSongButton = document.getElementById('nextSongButton');
-   
-           // 定义曲目列表
-           const songs = [
-               'https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/mp3/01.mp3',
-               'https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/mp3/02.mp3'
-							 'https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/mp3/03.mp3'
-							 'https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/mp3/04.mp3'
-							 'https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/mp3/05.mp3'
-							 'https://htmlpreview.github.io/?https://github.com/qianhuigaoda/qianhuigaoda.github.io/blob/master/mp3/06.mp3'
-           ];
-   
-           // 当前播放的曲目索引
-           let currentSongIndex = 0;
-   
-           // 当点击下一首按钮时
-           nextSongButton.addEventListener('click', function() {
-               // 检查是否已经是最后一首曲目
-               if (currentSongIndex < songs.length - 1) {
-                   // 增加当前曲目索引
-                   currentSongIndex++;
-                   // 更新音频播放器的源
-                   audioPlayer.src = songs[currentSongIndex];
-                   // 播放下一首曲目
-                   audioPlayer.play();
-               } else {
-                   // 如果是最后一首曲目，可以选择重置到第一首
-                   currentSongIndex = 0;
-                   audioPlayer.src = songs[currentSongIndex];
-                   audioPlayer.play();
-               }
-           });
-</script>
  </header>
 <main>
 	<style>
